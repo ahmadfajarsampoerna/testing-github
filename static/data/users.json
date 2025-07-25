@@ -1,0 +1,43 @@
+[
+    {
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin"
+    },
+    {
+        "username": "mamat",
+        "password": "mamat1"
+    },
+    {
+        "username": "sella",
+        "password": "sella123"
+    },
+    {
+        "username": "wowok",
+        "password": "wowok123"
+    },
+    {
+        "username": "fajar",
+        "password": "fajar123"
+    },
+    {
+        "username": "riski",
+        "password": "riski123"
+    },
+    {
+        "username": "bambang",
+        "password": "babang123"
+    },
+    {
+        "username": "dodi",
+        "password": "dodi123"
+    },
+    {
+        "username": "gegi",
+        "password": "regi123"
+    },
+    {
+        "username": "ujang",
+        "password": "ujang123"
+    }
+]

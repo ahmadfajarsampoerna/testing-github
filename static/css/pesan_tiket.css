@@ -1,0 +1,26 @@
+
+        body {
+            background: #eef1f5;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn-pesan {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-pesan:hover {
+            background-color: #218838;
+        }

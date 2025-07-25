@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Film</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tambah_film.css') }}">
+</head>
+<body>
+
+<div class="container py-4">
+    <div class="form-container">
+        <h2 class="mb-4">🎬 Tambah Film Baru</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <!-- Data Film -->
+            <div class="mb-3">
+                <label>Judul Film</label>
+                <input type="text" name="judul" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Sutradara</label>
+                <input type="text" name="sutradara" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Durasi (menit)</label>
+                <input type="number" name="durasi" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Rating</label>
+                <select name="rating" class="form-select" required>
+                    <option value="SU">SU (Semua Umur)</option>
+                    <option value="13+">13+</option>
+                    <option value="17+">17+</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Sinopsis</label>
+                <textarea name="sinopsis" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label>Genre</label>
+                <input type="text" name="genre" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Harga Tiket</label>
+                <input type="number" name="harga" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Status</label>
+                <select name="status" class="form-select" required>
+                    <option value="sedang tayang">Sedang Tayang</option>
+                    <option value="akan tayang">Akan Tayang</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Poster</label>
+                <input type="file" name="poster" class="form-control" required>
+            </div>
+
+            <!-- Lokasi Penayangan -->
+            <div class="mb-3">
+                <label>Lokasi Penayangan</label>
+                <select name="lokasi[]" class="form-select" multiple required>
+                    {% for lokasi_item in lokasi %}
+                        <option value="{{ lokasi_item['nama'] }}">{{ lokasi_item['nama'] }}</option>
+                    {% endfor %}
+                </select>
+                <small class="text-muted">Tekan Ctrl (Windows) atau Cmd (Mac) untuk memilih lebih dari satu lokasi</small>
+            </div>
+
+            <!-- Jadwal Penayangan -->
+            <div class="mb-3">
+                <label>Jadwal Penayangan</label>
+                <input type="datetime-local" name="jadwal[]" class="form-control mb-2" required>
+                <input type="datetime-local" name="jadwal[]" class="form-control mb-2">
+                <input type="datetime-local" name="jadwal[]" class="form-control mb-2">
+                <small class="text-muted">Isi minimal satu jadwal. Kosongkan sisanya jika tidak digunakan.</small>
+            </div>
+
+            <button type="submit" class="btn btn-success">Tambah Film</button>
+        </form>
+
+        <div class="mt-3">
+            <a href="{{ url_for('admin_dashboard') }}">← Kembali ke Dashboard</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

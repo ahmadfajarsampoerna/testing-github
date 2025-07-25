@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ film.judul }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail_film.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Kiri: Poster + Info Film -->
+            <div class="left">
+                <img src="{{ url_for('static', filename='images/' ~ film.poster) }}" width="200" alt="{{ film.judul }}">
+                <h1>{{ film.judul }}</h1>
+                <p><strong>Durasi:</strong> {{ film.durasi or 'menit' }}</p>
+                <p><strong>Sutradara:</strong> {{ film.sutradara or '' }}</p>
+                <p><strong>Rating:</strong> {{ film.rating or '' }}</p>
+                <p><strong>Sinopsis:</strong> {{ film.sinopsis or '' }}</p>
+                <p><strong>Genre:</strong> {{ film.genre|capitalize }}</p>
+                <p><strong>Harga Tiket:</strong> Rp 50.000</p>
+            </div>
+
+            <!-- Kanan: Jadwal, Lokasi, Pesan -->
+            <div class="right">
+                <div class="section">
+                    <h3>Jadwal Tayang</h3>
+                    <ul>
+                        {% if jadwal %}
+                            {% for j in jadwal %}
+                                <li>{{ j.tanggal }} - {{ j.jam }}</li>
+                            {% endfor %}
+                        {% else %}
+                            <li><em>Belum ada jadwal</em></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Lokasi Bioskop</h3>
+                    <ul>
+                        {% if lokasi %}
+                            {% for l in lokasi %}
+                                <li>{{ l.nama }}</li>
+                            {% endfor %}
+                        {% else %}
+                            <li><em>Belum ada lokasi</em></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                {% if jadwal and lokasi %}
+                <div class="section">
+                    <a href="{{ url_for('pesan_tiket', film_id=film.id) }}">
+                        <button>Pesan Tiket</button>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

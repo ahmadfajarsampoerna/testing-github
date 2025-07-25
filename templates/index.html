@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Bioskop PBO</title>
+</head>
+<body>
+    <h1>Daftar Film</h1>
+    <ul>
+        {% for film in films %}
+            <li>{{ film.deskripsi() }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Contoh Pemesanan</h2>
+    <p>{{ pesan.detail_pemesanan() }}</p>
+</body>
+</html>

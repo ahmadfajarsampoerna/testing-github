@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Jadwal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tambah_jadwal.css') }}">
+
+</head>
+<body>
+
+<div class="form-container">
+    <h2>🕒 Tambah Jadwal Film</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label class="form-label">Pilih Film:</label>
+            <select name="film_id" class="form-select" required>
+                {% for film in films %}
+                    <option value="{{ film.id }}">{{ film.judul }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Pilih Lokasi:</label>
+            <select name="lokasi" class="form-select" required>
+                {% for l in lokasi %}
+                    <option value="{{ l.nama }}">{{ l.nama }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tanggal:</label>
+            <input type="date" class="form-control" name="tanggal" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Jam Tayang:</label>
+            <input type="time" class="form-control" name="jam" required>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Simpan Jadwal</button>
+    </form>
+
+    <!-- Tombol Kembali ke Beranda -->
+    <a href="{{ url_for('admin_dashboard') }}" class="btn-back">🔙 Kembali ke Dashboard</a>
+</div>
+
+</body>
+</html>

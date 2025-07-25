@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Bukti Pemesanan Tiket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bukti_pesan.css') }}">
+</head>
+<body>
+
+<div class="bukti-container">
+    <div class="bukti-icon">✅</div>
+    <div class="bukti-header">Pemesanan Berhasil!</div>
+
+    <div class="bukti-info">
+        <div class="row">
+            <div class="col-5 label">🎬 Judul Film:</div>
+            <div class="col-7 value">{{ data['judul'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">👤 Nama:</div>
+            <div class="col-7 value">{{ data['nama'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">📧 Email:</div>
+            <div class="col-7 value">{{ data['email'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">🎫 Jumlah Tiket:</div>
+            <div class="col-7 value">{{ data['jumlah'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">🕘 Jam Tayang:</div>
+            <div class="col-7 value">{{ data['jam'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">💺 Kursi:</div>
+            <div class="col-7 value">{{ data['kursi'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">📍 Lokasi:</div>
+            <div class="col-7 value">{{ data['lokasi'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">💰 Harga/Tiket:</div>
+            <div class="col-7 value">Rp {{ data['harga'] }}</div>
+        </div>
+        <div class="row">
+            <div class="col-5 label">🧾 Total Bayar:</div>
+            <div class="col-7 value">Rp {{ data['total'] }}</div>
+        </div>
+    </div>
+
+    <a href="{{ url_for('daftar_film') }}" class="btn btn-success w-100">🏠 Kembali ke Beranda</a>
+</div>
+
+</body>
+</html>

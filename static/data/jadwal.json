@@ -1,0 +1,156 @@
+[
+    {
+        "id": 24355,
+        "film_id": "13901",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-13",
+        "jam": "12.00-15.00"
+    },
+    {
+        "id": 21297,
+        "film_id": "63530",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-19",
+        "jam": "12:00"
+    },
+    {
+        "id": 41894,
+        "film_id": "24913",
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-20",
+        "jam": "13:00"
+    },
+    {
+        "id": 24351,
+        "film_id": "66225",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-13",
+        "jam": "12.00-15.00"
+    },
+    {
+        "id": 21291,
+        "film_id": "63531",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-19",
+        "jam": "12:00"
+    },
+    {
+        "id": 41892,
+        "film_id": "63532",
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-20",
+        "jam": "13:00"
+    },
+    {
+        "id": 24356,
+        "film_id": "63533",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-13",
+        "jam": "12.00-15.00"
+    },
+    {
+        "id": 21293,
+        "film_id": "63534",
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-19",
+        "jam": "12:00"
+    },
+    {
+        "id": 41890,
+        "film_id": "63535",
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-20",
+        "jam": "13:00"
+    },
+    {
+        "id": 41899,
+        "film_id": "63536",
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-20",
+        "jam": "13:00"
+    },
+    {
+        "id": 41870,
+        "film_id": "17171",
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-20",
+        "jam": "13:00"
+    },
+    {
+        "id": 58818,
+        "film_id": "12312",
+        "lokasi": "surabaya",
+        "tanggal": "2025-07-03",
+        "jam": "08:48"
+    },
+    {
+        "id": 31838,
+        "film_id": 54127,
+        "lokasi": "Boemi Kedaton XXI",
+        "tanggal": "2025-07-23",
+        "jam": "09:55"
+    },
+    {
+        "id": 50056,
+        "film_id": 49698,
+        "lokasi": "Boemi Kedaton XXI",
+        "tanggal": "2025-07-26",
+        "jam": "06:01"
+    },
+    {
+        "id": 453,
+        "film_id": 35627,
+        "lokasi": "pekan baru",
+        "tanggal": "2025-07-31",
+        "jam": "06:02"
+    },
+    {
+        "id": 28664,
+        "film_id": 35301,
+        "lokasi": "Plaza",
+        "tanggal": "2025-07-24",
+        "jam": "06:04"
+    },
+    {
+        "id": 61817,
+        "film_id": 22155,
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-26",
+        "jam": "06:05"
+    },
+    {
+        "id": 63566,
+        "film_id": 37692,
+        "lokasi": "Boemi Kedaton XXI",
+        "tanggal": "2025-07-25",
+        "jam": "14:34"
+    },
+    {
+        "id": 47095,
+        "film_id": 24913,
+        "lokasi": "Boemi Kedaton XXI",
+        "tanggal": "2025-07-26",
+        "jam": "15:35"
+    },
+    {
+        "id": 30939,
+        "film_id": 25717,
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-25",
+        "jam": "14:46"
+    },
+    {
+        "id": 14759,
+        "film_id": 25717,
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-25",
+        "jam": "14:47"
+    },
+    {
+        "id": 25186,
+        "film_id": 7239,
+        "lokasi": "Central Lampung XXI",
+        "tanggal": "2025-07-25",
+        "jam": "15:17"
+    }
+]
